@@ -5,8 +5,8 @@ from cryptography.hazmat.backends import default_backend
 class AlienTranslator:
 
     def __init__(self, human2alien, key, nonce):
-        self.e2m_dic = {}
         self.m2e_dic = human2alien
+        self.e2m_dic = {}
 
         for m in self.m2e_dic.keys():
             self.e2m_dic[self.m2e_dic[m]] = m
